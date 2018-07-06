@@ -8,7 +8,7 @@ $(".new-char").hide();
 
 /* URL to our BE: */
 // const BEurl = 'http://localhost:3000';
-const BEurl = "https://immense-basin-20540.herokuapp.com/";
+const BEurl = "https://immense-basin-20540.herokuapp.com";
 
 /* retrieve & append favorites */
 function retrieveFaves(){
@@ -108,13 +108,5 @@ window.onload = function() {
       retrieveFaves();
     });
   });
-
-
-
-
-
-
-
-
 
 }; /* end window onload fxn */
