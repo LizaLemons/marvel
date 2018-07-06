@@ -30,7 +30,7 @@ Find the code on Github:
 **Frontend:**
 - JS
 - HTML
-- CSS
+- SASS
 
 
 ---
@@ -58,7 +58,7 @@ Find the code on Github:
 
 **"Unfavoriting" functionality:**
 - When the user clicks the heart next to a character in the "favorites" list on the left, the FE captures the marvel ID of the character & sends this data to the BE.
-- The BE then connects to Mongo, finds the character in the DB by its Marvel ID, & deletes it. 
+- The BE then connects to Mongo, finds the character in the DB by its Marvel ID, & deletes it.
 
 
 
