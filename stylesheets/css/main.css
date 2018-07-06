@@ -1,0 +1,54 @@
+html, body {
+  font-family: 'Cormorant', serif;
+  margin: 0; }
+  html h2, body h2 {
+    font-size: 30px; }
+    html h2 i, body h2 i {
+      font-size: 20px;
+      padding-right: 7px; }
+
+#top-container {
+  height: 440px; }
+  #top-container .colored-bg {
+    background-color: #9D0010;
+    height: 75%; }
+  #top-container .title-box {
+    margin-top: 230px; }
+    #top-container .title-box h1 {
+      margin-top: 0;
+      font-weight: 700;
+      font-size: 75px;
+      line-height: 0.8em; }
+  #top-container .char-img-container {
+    margin-top: 90px; }
+    #top-container .char-img-container img {
+      height: 324px;
+      width: 216px;
+      background: white; }
+
+#content-containers {
+  padding: 0 75px; }
+  #content-containers .heart {
+    cursor: pointer; }
+    #content-containers .heart:hover {
+      color: lightGray; }
+  #content-containers .right {
+    border-left: 1px solid black; }
+  #content-containers .content-container {
+    padding-left: 50px; }
+    #content-containers .content-container .none {
+      font-weight: 400i;
+      font-style: italic; }
+    #content-containers .content-container ul li i {
+      font-size: 8;
+      padding-right: 10px; }
+  #content-containers #search-container a {
+    background-color: #9D0010; }
+  #content-containers #character-container .char-description {
+    font-style: italic; }
+  #content-containers #character-container .char-name {
+    font-size: 24px; }
+  #content-containers #character-container i.heart {
+    margin-left: 5px; }
+
+/*# sourceMappingURL=main.css.map */

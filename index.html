@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marvel API</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant:400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link rel="icon" href="http://www.favicon.cc/logo3d/762908.png" type="image/x-icon"> -->
+  <link rel="icon" href="img/hulk-face.png" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="index.css"> -->
+  <link rel="stylesheet" href="stylesheets/css/main.css">
+
+</head>
+<body>
+
+<!--
+** HULK SMASH **
+
+`````````````````````SSS
+````````````````````SSSSSS
+```````````````````SSSSSSSS
+```````````````````SSSSSSSSSSS
+```````````````SSSSSSSSSSSSSSSSSSSo
+```````````SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+``````oSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+`````SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+`````SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+````oSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+```oSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS$
+```SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+```oSSSSSSSSooSSSSSSSSSSSSSSSSSSSSS```SSSSSSSSSS
+``oSSSSSSSS`````SSSSSSSSSSSSSSSSSS```````SSSSSSSS
+`SSSSSSSSS``````SSSSSSSSSSSSSSSSSo``````SSSSSSSSSS
+`SSSSSSSSSo`````SSSSSSSSSSSSSSSSSS``````oSSSSSSSSS
+oSSSSSSSSSo`````SSSSSSSSSSSSSSSSSS````````SSSSSSSS
+`SSSSSSSS``````oSSSSSSSSSSSSSSSSSSo````````SSSSSSSo
+`SSSSSSS```````SSSSSSSSSSSSSSSSSSSS`````````oSSSSSS
+`SSSSSSSo`````SSSSSSSSSSSSSSSSSSSSSo```````SSSSSSSS
+`oSSSSSSSSo```SSSSSSSSSSSSSSSSSSSSSS`````oSSSSSSSSSo
+`oSSSSSSSSS$``SSSSSSSSSSSSSSSSSSSSSSo````S``oSSSSSSo
+`SSSSSSS```S``SSSSSSSSSSSSSSSSSSSSSSS`````````SSSSS
+``SSSSSSo`````SSSSSSSSSSS`oSSSSSSSSSS````````SSS
+````SSSSSS````SSSSSSSSSSS`oSSSSSSSSSS
+```````````````SSSSSSSSS```SSSSSSSSSo
+```````````````SSSSSSSSS```SSSSSSSSSo
+```````````````SSSSSSSSSSSSSSSSSSSSS
+```````````````SSSSSSSSSSSSSSSSSSSSo
+```````````````SSSSSSSSSSo`SSSSSSo
+```````````````SSSSSSSSSS`````oo
+-->
+
+<div id="top-container">
+  <div class="colored-bg">
+    <div class="row">
+      <div class="title-box col s12 m6">
+        <div class="row">
+          <div class="col offset-m2">
+            <h1>My Marvel<br>Favorites</h1>
+          </div>
+        </div>
+      </div>
+      <div class="char-img-container col s12 m6">
+        <div class="row">
+          <div class="col offset-m3">
+            <img id="char-img" src="img/hulk-face.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" id="content-containers">
+  <div class="col s12">
+    <div class="row">
+
+      <!-- left -->
+      <div class="col s12 m4">
+        <div class="row">
+
+          <!-- faves -->
+          <div class="col m12" id="faves-container">
+            <div class="section-header">
+              <h2><i class="material-icons">favorite_border</i> My Favorites</h2>
+            </div>
+
+            <div class="faves-content-container content-container">
+              <div class="none no-faves-yet">No favorites yet!</div>
+              <ul id="faves-list">
+                <!--  -->
+              </ul>
+            </div>
+          </div>
+          <!-- end faves -->
+
+        </div>
+      </div>
+      <!-- end left -->
+
+      <!-- right -->
+      <div class="col s12 m8 right">
+        <div class="row">
+
+          <!-- search -->
+          <div class="col s12" id="search-container">
+            <div class="section-header">
+              <h2><i class="material-icons">search</i>Search</h2>
+            </div>
+
+            <div class="content-container">
+              <form class="col s6">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="character_name" type="text" class="validate">
+                    <label for="character_name">Try "Hulk", "Spider-Man", or "Iron Man"</label>
+                  </div>
+                  <div class="col s12">
+                    <a class="waves-effect waves-light btn-small marvel-search-btn">
+                      <i class="material-icons left">search</i>
+                      Search
+                    </a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- end search -->
+
+          <!-- char info -->
+          <div class="col s12" id="character-container">
+            <div class="section-header">
+              <h2><i class="material-icons">face</i>Character Info</h2>
+            </div>
+
+            <div class="content-container">
+              <div class="none no-char-found"></div>
+              <div class="char-name">
+                <i class="heart new-char material-icons">favorite_border</i>
+              </div>
+              <div class="char-description"></div>
+            </div>
+          </div>
+          <!-- end char info -->
+
+        </div>
+      </div>
+      <!-- end right -->
+
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.1.min.js" charset="utf-8"></script>
+<script src="index.js" charset="utf-8"></script>
+</body>
+</html>
